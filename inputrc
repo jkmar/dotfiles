@@ -1,0 +1,7 @@
+## vim
+set editing-mode vi
+set keymap vi
+## arrow up
+"\e[A":history-search-backward
+## arrow down
+"\e[B":history-search-forward
