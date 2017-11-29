@@ -8,6 +8,10 @@ filetype plugin indent on
 " Search
 set incsearch
 set hlsearch
+nmap <silent> <Leader>/ :nohlsearch<CR>
+
+set ignorecase
+map <silent> <F12> :set ignorecase!<CR>
 
 " Color scheme
 set background=light
@@ -24,13 +28,13 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-" Show line numbers
-set number
-nmap <F9> :set nonumber!<CR>
+" Show relative line numbers
+set relativenumber
+map <silent> <F9> :set norelativenumber!<CR>
 
 set pastetoggle=<F10>
 
-map <silent> <C-n> :NERDTreeFocus<CR>
+map <silent> <Leader>t :NERDTreeToggle<CR>
 
 " Trim white space
 map <silent> <C-l> :%s/\s\+$//e<CR>
