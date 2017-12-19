@@ -17,15 +17,19 @@ $if mode=vi
 
 set keymap vi-command
 # these are for vi-command mode
+"\e[5~": history-substring-search-backward # pg up
+"\e[6~": history-substring-search-forward  # pg down
 "\e[A": history-search-backward            # arrow up
 "\e[B": history-search-forward             # arrow down
-"\ep": yank-last-arg                       # bind to Alt-p
+"\ep": yank-last-arg                       # Alt-p
 Control-l: clear-screen
 
 set keymap vi-insert
 # these are for vi-insert mode
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-"\ep": yank-last-arg
+"\e[5~": history-substring-search-backward # pg up
+"\e[6~": history-substring-search-forward  # pg down
+"\e[A": history-search-backward            # arrow up
+"\e[B": history-search-forward             # arrow down
+"\ep": yank-last-arg                       # Alt-p
 Control-l: clear-screen
 $endif
