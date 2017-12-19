@@ -1,6 +1,6 @@
 execute pathogen#infect()
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-let mapleader = " "
+let g:ycm_global_ycm_extra_conf="~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let mapleader=" "
 
 syntax on
 filetype plugin indent on
@@ -14,6 +14,17 @@ set ignorecase
 map <silent> <F12> :set ignorecase!<CR>
 
 " Color scheme
+set t_Co=256
+
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=256
+"
+"let g:solarized_bold=1
+"let g:solarized_underline=1
+"let g:solarized_italic=1
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+
 set background=light
 colorscheme solarized
 
