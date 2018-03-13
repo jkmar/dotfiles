@@ -130,6 +130,12 @@ fi
 # Put your local functions and aliases here
 bind '"":"cd ..\C-m"'
 
+function ifip() {
+    ifconfig $1 | grep 'inet addr' | cut -d: -f2 | cut -d' ' -f1
+}
+
+alias dockerip='ifip docker0'
+
 function swap() {
     local TMPFILE=tmp.$$
     mv "$1" $TMPFILE
@@ -142,9 +148,7 @@ function hide() {
     rm "$1"
 }
 
-function pyclean() {
-    find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete
-}
+alias pyclean='find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete'
 
 function count() {
     find $1 -name "*.$2" | xargs -t wc -l
