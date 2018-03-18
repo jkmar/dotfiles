@@ -70,3 +70,7 @@ nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>x :x<CR>
 nmap <Leader>a :qa<CR>
+
+" File navigation
+nmap <C-k> gf
+nmap <C-j> :bf<CR>
