@@ -148,6 +148,7 @@ function hide() {
     rm "$1"
 }
 
+alias vimclean='find . -type f -name "*.swp" -delete'
 alias pyclean='find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete'
 
 function count() {
