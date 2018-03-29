@@ -45,7 +45,12 @@ map <silent> <F9> :set norelativenumber!<CR>
 
 set pastetoggle=<F10>
 
+" NERD Tree
 map <silent> <Leader>t :NERDTreeToggle<CR>
+
+" NERD Commenter
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 " Trim white space
 map <silent> <C-l> :%s/\s\+$//e<CR>
