@@ -148,6 +148,10 @@ function hide() {
     rm "$1"
 }
 
+function enter() {
+    docker exec -it $1 /bin/bash
+}
+
 alias vimclean='find . -type f -name "*.swp" -delete'
 alias pyclean='find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete'
 
