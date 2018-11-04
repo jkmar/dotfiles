@@ -152,6 +152,10 @@ function enter() {
     docker exec -it $1 /bin/bash
 }
 
+function latest() {
+    realpath "$1/$(ls -t -1 $1 | head -n 1)"
+}
+
 alias vimclean='find . -type f -name "*.swp" -delete'
 alias pyclean='find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete'
 
