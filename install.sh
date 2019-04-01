@@ -17,6 +17,10 @@ mv ${HOME}/.pythonrc ${BACKUP}/
 echo "so ${PWD}/vim/vimrc.vim" > ${HOME}/.vimrc
 echo "source ${PWD}/tmux/tmux.conf" > ${HOME}/.tmux.conf
 echo "source ${PWD}/bash/bashrc" > ${HOME}/.bashrc
+grep -q "dotfiles/gitconfig" ${HOME}/.gitconfig || cat << EOF >> ${HOME}/.gitconfig
+[include]
+    path = ${HOME}/dotfiles/gitconfig
+EOF
 
 cp pythonrc ${HOME}/.pythonrc
 cp inputrc ${HOME}/.inputrc
