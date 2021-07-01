@@ -28,4 +28,7 @@ cp inputrc ${HOME}/.inputrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+git clone git://github.com/altercation/vim-colors-solarized.git
+mv vim-colors-solarized ~/.vim/bundle/
+
 cat ${HOME}/.bash_history >> ${HOME}/.bash_eternal_history
