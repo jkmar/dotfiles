@@ -25,4 +25,7 @@ EOF
 cp pythonrc ${HOME}/.pythonrc
 cp inputrc ${HOME}/.inputrc
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 cat ${HOME}/.bash_history >> ${HOME}/.bash_eternal_history
