@@ -2,6 +2,9 @@
 
 set -x
 
+sudo apt update && \
+    sudo apt install -y vim-gtk3 tmux xclip
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BACKUP=".backup"
 
